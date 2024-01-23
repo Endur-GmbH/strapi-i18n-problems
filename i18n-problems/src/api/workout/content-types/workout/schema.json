@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "workouts",
+  "info": {
+    "singularName": "workout",
+    "pluralName": "workouts",
+    "displayName": "Workout",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag",
+      "mappedBy": "workout"
+    },
+    "coaches": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::coach.coach",
+      "mappedBy": "workout"
+    },
+    "parts": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "dynamiczone",
+      "components": [
+        "workout.exercise"
+      ]
+    }
+  }
+}

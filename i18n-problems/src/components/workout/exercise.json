@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_workout_exercises",
+  "info": {
+    "displayName": "Exercise"
+  },
+  "options": {},
+  "attributes": {
+    "amount": {
+      "type": "integer",
+      "min": 1
+    },
+    "exercise": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::exercise.exercise"
+    }
+  }
+}

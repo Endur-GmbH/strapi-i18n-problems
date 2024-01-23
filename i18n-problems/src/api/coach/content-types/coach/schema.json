@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "coaches",
+  "info": {
+    "singularName": "coach",
+    "pluralName": "coaches",
+    "displayName": "Coach"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "workout": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::workout.workout",
+      "inversedBy": "coaches"
+    }
+  }
+}
